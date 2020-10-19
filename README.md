@@ -6,6 +6,8 @@
 a simple and convenient way using a bit of Python. The aim is to hit a sweet
 spot of quick productivity with little (time) cost.
 
+![equities xlsx screenshot](equities_screenshot.png)
+
 ## Benefits
 
 * Easy creation and maintenance of one or more equity/investment universes.
