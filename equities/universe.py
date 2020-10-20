@@ -4,7 +4,7 @@ It can be used to group and manage descriptive, fundamental, and price data
 for a number of equities.
 """
 
-
+import pathlib
 import tablib
 import pandas as pd
 import equities.utils
@@ -164,11 +164,10 @@ class Universe:
 
     def _detect_file_format(self, filename):
         """Detect file format from file extension."""
-        for frmt in self.SUPPORTED_STORAGE_FORMATS:
-            if '.{}'.format(frmt) in str(filename):
-                return frmt
-            else:
-                raise UnsupportedFormat
+        ext = pathlib.Path(filename).suffix.lstrip('.')
+        if ext in self.SUPPORTED_STORAGE_FORMATS:
+            return ext
+        raise UnsupportedFormat
 
 
 class UniverseFilenameNotSet(RuntimeError):
