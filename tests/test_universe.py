@@ -69,7 +69,8 @@ def test_find_non_existent_ticker(stocks_csv):
     univ = equities.Universe()
     univ.import_file(stocks_csv)
 
-    assert univ.equity('NONE') == {}
+    with pytest.raises(equities.universe.TickerSymbolNotFound):
+        univ.equity('NONE')
 
 
 def test_prices(stocks_csv, fake_prices):

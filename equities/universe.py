@@ -88,13 +88,13 @@ class Universe:
     def equity(self, ticker_symbol):
         """Return a dict with data for given ticker symbol."""
         if not self.equities.dict:
-            return {}
+            raise TickerSymbolNotFound
 
         try:
             row_index = \
                 self.equities[self._id_column_name].index(ticker_symbol)
         except ValueError:
-            return {}
+            raise TickerSymbolNotFound from None
         # Replace 'None' strings with real None objects.
         data = [None if v == 'None' else v for v in
                 self.equities[row_index]]
@@ -180,3 +180,7 @@ class IdColumnError(RuntimeError):
 
 class UnsupportedFormat(NotImplementedError):
     "Format is not supported."
+
+
+class TickerSymbolNotFound(RuntimeError):
+    "Ticker symbol was not found"
