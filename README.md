@@ -1,10 +1,9 @@
 # Equities
 
-## About
+![Python package](https://github.com/lefs/equities/workflows/Python%20package/badge.svg)
 
 `equities` can help individuals to maintain one or more "equity universes" in
-a simple and convenient way using a bit of Python. The aim is to hit a sweet
-spot of quick productivity with little (time) cost.
+a simple and convenient way using a bit of Python. The goal of this package is to hit a sweet spot of quick productivity with little time investment.
 
 ![equities xlsx screenshot](equities_screenshot.png)
 
@@ -97,6 +96,7 @@ Inside the project directory run:
 ```bash
 $ pip install .
 ```
+Python >= 3.6 is supported.
 
 ## License
 
