@@ -1,6 +1,6 @@
 # Equities
 
-![Python package](https://github.com/lefs/equities/workflows/Python%20package/badge.svg)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/lefs/equities/Python%20package?style=flat-square)
 
 `equities` can help you to group and maintain names of interest in one or more "equity universes",
 in a simple and convenient way using a bit of Python. The goal of this library is to hit a sweet
